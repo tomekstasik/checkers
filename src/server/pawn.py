@@ -14,9 +14,8 @@ class Pawn(object):
     def __str__(self):
         """Returns string representation of pawn: 'bp' - black pawn, 'wp' - white pawn, 'bk' - black king, 'wk' - white king.
         Usefull for board building when board is sent to client"""
-        s = 'w' if self.color == PawnColors.WHITE else 'b'
-        s += 'p' if not self.king else 'k'
-        return s
+        type = 'p' if not self.king else 'k'
+        return self.color + type
         
 
 class WhitePawn(Pawn):
