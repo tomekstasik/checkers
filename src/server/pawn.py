@@ -2,7 +2,7 @@
 
 from pawncolors import PawnColors
 
-class Pawn:
+class Pawn(object):
     def __init__(self, color):
         self.color = color
         self.king = False
