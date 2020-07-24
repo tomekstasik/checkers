@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import threading
+import json
 from datetime import datetime
 
 class BattleThread(threading.Thread):
@@ -39,4 +40,8 @@ class BattleThread(threading.Thread):
 
     def get_end_date(self):
         """Returns battle end date/time"""
+        pass
+
+    def send_board(self, board):
+        """Sends current board state to clients - jsonified board, like [['bp', 'bp', None,...],[...],[None, 'wp', 'wk'...]] etc."""
         pass
