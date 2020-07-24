@@ -31,3 +31,7 @@ class Server(object):
     def get_battle_info(self, battle_num):
         """Returns battle info by battle number"""
         pass
+
+    def is_nickname_available(self, nickname):
+        """Searches active battles list and check used nicknames"""
+        pass
