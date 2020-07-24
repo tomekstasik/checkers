@@ -19,7 +19,6 @@ class Pawn(object):
         return s
         
 
-
 class WhitePawn(Pawn):
     def __init__(self, color=PawnColors.WHITE):
         super(WhitePawn, self).__init__(color)

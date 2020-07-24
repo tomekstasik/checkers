@@ -11,7 +11,7 @@ class BattleThread(threading.Thread):
         pass
     
     def run(self):
-        """Start battle thread, white player makes very first move"""
+        """Start battle thread, white player makes very first move, both players should confirm battle can be started"""
         pass
     
     def do_move(self, player, move):

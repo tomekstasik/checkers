@@ -19,7 +19,7 @@ class Client(object):
         pass
 
     def draw_board(self, board):
-        """Draws current board state """
+        """Draws current board state - pawn recognized by their str reprezentation - see pawn.py"""
         pass
 
     def enter_move(self):

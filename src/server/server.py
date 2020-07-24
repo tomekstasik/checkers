@@ -13,7 +13,7 @@ class Server(object):
     
     def wait_for_players(self):
         """When two participans are connected, Player objects need to be created and passed to BattleThread.
-        First player - white, second black. Created battle number is following players pair number"""
+        First player - white, second black. Created battle number is following players pair number."""
         pass
     
     def add_battle(self, battle):
