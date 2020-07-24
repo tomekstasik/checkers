@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 class Move(object):
-    def __init__(self, current_position, destination):
+    def __init__(self, _from, to):
         """Initilize move items - translate to xy"""
         pass
 
-    def translate_to_xy(self, current_position, destination):
+    def translate_to_xy(self, _from, to):
         """Translates client move representation to board coordinates:
           A B C D E F G H
         8[               ]8
@@ -24,9 +24,9 @@ class Move(object):
         pass
 
     def get_from(self):
-        """Returns from coordinates"""
+        """Returns 'from' coordinates"""
         pass
 
     def get_to(self):
-        """Returns to coordinates"""
+        """Returns 'to' coordinates"""
         pass
