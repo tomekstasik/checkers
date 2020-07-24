@@ -5,7 +5,7 @@ from src import Server
 if __name__ == '__main__':
     HOST = '0.0.0.0'
     PORT = 12345
-    LOGFILE = "logs.txt"
+    HISTORY_FILE = "battles_history.txt"
 
-    server = Server(HOST, PORT, LOGFILE)
+    server = Server(HOST, PORT, HISTORY_FILE)
     server.wait_for_players()
