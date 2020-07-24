@@ -21,8 +21,8 @@ class BattleThread(threading.Thread):
         """Return current player opponent - usefull to assign next turn"""
         pass
 
-    def get_players_info(self):
-        """Return players data for current battle"""
+    def get_players_nicknames(self):
+        """Return players nicknames for current battle"""
         pass
 
     def set_start_date(self):
