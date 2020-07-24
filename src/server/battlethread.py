@@ -3,6 +3,7 @@
 import threading
 import json
 from datetime import datetime
+from move import Move
 
 class BattleThread(threading.Thread):
     """This class describes thread created after two participants connect to the server to start the game"""
