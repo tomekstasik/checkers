@@ -11,12 +11,20 @@ class Pawn(object):
         """Makes current pawn the king"""
         self.king = True
 
+    def __str__(self):
+        """Returns string representation of pawn: 'bp' - black pawn, 'wp' - white pawn, 'bk' - black king, 'wk' - white king.
+        Usefull for board building when board is sent to client"""
+        s = 'w' if self.color == PawnColors.WHITE else 'b'
+        s += 'p' if not self.king else 'k'
+        return s
+        
+
 
 class WhitePawn(Pawn):
     def __init__(self, color=PawnColors.WHITE):
-        super().__init__(color)
+        super(WhitePawn, self).__init__(color)
 
 
 class BlackPawn(Pawn):
     def __init__(self, color=PawnColors.BLACK):
-        super().__init__(color)
+        super(BlackPawn, self).__init__(color)
