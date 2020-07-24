@@ -23,3 +23,7 @@ class Board(object):
     def is_move_within_board(self, move):
         """Checks if move is within bound of board"""
         pass
+
+    def is_legal_square(self, move):
+        """Checks if given square is black"""
+        pass
