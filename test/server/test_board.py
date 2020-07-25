@@ -18,6 +18,7 @@ def test_initial_board_generation():
             6 [None, WhitePawn(), None, WhitePawn(), None, WhitePawn(), None, WhitePawn()],
             7 [WhitePawn(), None, WhitePawn(), None, WhitePawn(), None, WhitePawn(), None]
         ]"""
+
     board = Board.generate()
 
     ### First & third row (top)
@@ -53,11 +54,12 @@ def test_initial_board_generation():
         assert isinstance(board[6][f], WhitePawn)
 
 def test_do_not_move_to_white_square():
+    """It actually tests is_black_square()"""
     black_pawn = BlackPawn()
     # Lets use smaller board - full size is not required here
     board = [ # Left upper corner of board
         [None, black_pawn],
-        [None, None]
+        [None,       None]
     ]
     gameboard = Board(board)
     # Let's try to move from B8 to B7
@@ -71,10 +73,13 @@ def test_do_not_move_out_of_board():
     # Lets use smaller board - full size is not required here
     board = [ # Left upper corner of board
         [None, black_pawn],
-        [None, None]
+        [None,       None]
     ]
     gameboard = Board(board)
     move = Move('B8', 'B9')
+    result = gameboard.is_move_within_board(move)
+    assert result is False
+
     result = gameboard.make_move(move)
     assert result is False
     assert gameboard.get_board() == board
@@ -84,14 +89,17 @@ def test_move_black_pawn_one_field_down():
     # Lets use smaller board - full size is not required here
     board = [ # Left upper corner of board
         [None, black_pawn],
-        [None, None]
+        [None,       None]
     ]
     gameboard = Board(board)
     move = Move('B8', 'A7')
+    result = gameboard.is_move_within_board(move)
+    assert result is True
+
     result = gameboard.make_move(move)
     assert result is True
     assert gameboard.get_board() == [
-        [None,      None],
+        [None,       None],
         [black_pawn, None]
     ]
 
@@ -110,23 +118,26 @@ def test_do_not_move_black_pawn_up_back():
 def test_move_white_pawn_up():
     white_pawn = WhitePawn()
     board = [ # let assume left bottom corner of board
-        [None,      None],
+        [None,       None],
         [white_pawn, None],
     ]
     gameboard = Board(board)
     move = Move('A1', 'B2')
+    result = gameboard.is_move_within_board(move)
+    assert result is True
+
     result = gameboard.make_move(move)
     assert result is True
     assert gameboard.get_board() == [
         [None, white_pawn],
-        [None,      None],
+        [None,       None],
     ]
 
 def test_do_not_move_white_pawn_down_back():
     white_pawn = WhitePawn()
     board = [ # let assume left bottom corner of board
         [None, white_pawn],
-        [None, None],
+        [None,       None],
     ]
     gameboard = Board(board)
     move = Move('B2', 'A1')
