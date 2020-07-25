@@ -2,7 +2,7 @@
 
 class Client(object):
     def __init__(self, server_host, port):
-        """Stores data about server connection"""
+        """Stores data for server connection"""
         pass
 
     def connect(self):
@@ -11,7 +11,7 @@ class Client(object):
 
     def enter_nickname(self):
         """Reads nickname from standard input and sends to game server.
-        It's done until server returns info nickname is available"""
+        It's done until server returns confirmation nickname is available"""
         pass
 
     def start_battle(self):

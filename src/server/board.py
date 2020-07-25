@@ -24,6 +24,6 @@ class Board(object):
         """Checks if move is within bound of board"""
         pass
 
-    def is_legal_square(self, move):
-        """Checks if given square is black"""
+    def is_legal_square(self, to):
+        """Checks if given destination square is black"""
         pass

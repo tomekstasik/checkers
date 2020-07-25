@@ -1,1 +1,1 @@
-from src import Server
+from .server import *
