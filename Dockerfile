@@ -1,11 +1,12 @@
 FROM python:2.7
 
 # Set the working directory to /app
-WORKDIR /app
+#WORKDIR /app
 
 COPY requirements.txt /
 RUN pip install -r requirements.txt
 COPY README.md /
+COPY run.py /
 COPY src /
 
 

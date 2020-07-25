@@ -1,8 +1,8 @@
-version '3'
-services
-  checkers
-    build .
-    container_name checkers
-    restart always
-    ports
+version: '3'
+services:
+  checkers:
+    build: .
+    container_name: checkers
+    restart: always
+    ports:
     - "12345:12345"
