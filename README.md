@@ -11,6 +11,18 @@ $ venv\Scripts\activate
 $ pip install -r requirements.txt
 ```
 
+## Run server
+```sh
+$ cd checkers
+$ docker-compose up --build
+```
+
+## Run client
+```sh
+$ cd checkers/client
+$ python run.py
+```
+
 ## Tests
 ```sh
 $ py.test test

@@ -6,3 +6,4 @@ services:
     restart: always
     ports:
     - "12345:12345"
+  # maybe we can also add volume to store history file in localdisk...
