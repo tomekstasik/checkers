@@ -16,6 +16,10 @@ class Pawn(object):
         Usefull for board building when board is sent to client"""
         type = 'p' if not self.king else 'k'
         return self.color + type
+    
+    def is_king(self):
+        """Returns wheather pawn is king or not"""
+        return self.king
         
 
 class WhitePawn(Pawn):

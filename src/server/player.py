@@ -3,8 +3,12 @@
 from pawncolors import PawnColors
 
 class Player(object):
-    def __init__(self, socket, nickname):
+    def __init__(self, socket=None, nickname=None):
         """Every player has it's own socket and nickname assigned"""
+        pass
+
+    def set_socket(self, socket):
+        """Sets player socket"""
         pass
 
     def get_socket(self):

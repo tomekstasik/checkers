@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import pytest
 
 from src.server.move import Move
+from src.server.board import Board
 
 def test_move_initialization():
     """Checking base Move methods"""
@@ -15,4 +18,4 @@ def test_board_coordinates_toXY():
     m = Move()
     for col_num, col_name in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']):
         for row in range(1, 9):
-            assert m.translate_to_xy(col_name + str(row)) == (8 - row, col_num)
+            assert m.translate_to_xy(col_name + str(row)) == (Board.SIZE - row, col_num)
