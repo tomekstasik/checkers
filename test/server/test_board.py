@@ -63,7 +63,7 @@ def test_is_back_square():
               'D8', 'D6', 'D4', 'D2',
               'F8', 'F6', 'F4', 'F2',
               'H8', 'H6', 'H4', 'H2']:
-              assert board.is_black_square(f) is True
+        assert board.is_black_square(f) is True
     for f in ['A8', 'A6', 'A4', 'A2',
             'C8', 'C6', 'C4', 'C2',
             'E8', 'E6', 'E4', 'E2',
@@ -72,7 +72,7 @@ def test_is_back_square():
             'D7', 'D5', 'D3', 'D1',
             'F7', 'F5', 'F3', 'F1',
             'H7', 'H5', 'H3', 'H1']:
-            assert board.is_black_square(f) is False
+        assert board.is_black_square(f) is False
 
 def test_do_not_move_to_white_square():
     """It actually tests is_black_square()"""
