@@ -2,7 +2,7 @@
 
 from battlethread import BattleThread
 from player import Player
-from pawncolors import PawnColours
+from pawncolours import PawnColours
 
 class Server(object):
     """This is server class responsible for waiting for incoming connections."""
@@ -13,11 +13,7 @@ class Server(object):
     
     def wait_for_players(self):
         """When two participants are connected, Player objects need to be created and passed to BattleThread.
-        First player - white, second black. Created battle number is following players pair number."""
-        import time
-        while True:
-            print 'Waiting...'
-            time.sleep(1)
+            First player - white, second black. Created battle number is following players pair number."""
         pass
     
     def add_battle(self, battle):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pawncolors import PawnColours
+from pawncolours import PawnColours
 
 class Pawn(object):
     def __init__(self, colour):
