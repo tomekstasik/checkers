@@ -5,11 +5,10 @@ Both players make diagonal moves of uniform game pieces and mandatory captured b
 
 # development
 .. code:: sh
-    cd checkers
-    virtualenv venv
-    venv\Scripts\activate
-
-    pip install -r requirements.txt
+    $ cd checkers
+    $ virtualenv venv
+    $ venv\Scripts\activate
+    $ pip install -r requirements.txt
 
 # tests
 .. code:: sh
