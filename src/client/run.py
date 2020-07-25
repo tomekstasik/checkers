@@ -7,6 +7,6 @@ if __name__ == '__main__':
     PORT = 12345
 
     client = Client(SERVER_HOST, PORT)
-    client.connect()
     client.enter_nickname()
+    client.connect()
     client.start_battle()

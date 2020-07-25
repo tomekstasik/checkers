@@ -34,3 +34,7 @@ class Board(object):
     def get_board(self):
         """Return current boart state"""
         pass
+
+    def get_board_for_ascii(self):
+        """Returns bord representation for client to build it in ASCII art"""
+        pass

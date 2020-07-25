@@ -327,3 +327,41 @@ def test_white_pawn_becomes_king():
     ]
 # and so on...
 # TODO: more tests for kings logic
+
+def test_get_board_for_ascii():
+    """Checks if board is converted properly to format which can be easily converted to JSON"""
+    board = [
+            [None, BlackPawn(), None, BlackPawn(), None, BlackPawn(), None, BlackPawn()],
+            [BlackPawn(), None, BlackPawn(), None, BlackPawn(), None, BlackPawn(), None],
+            [None, BlackPawn(), None, BlackPawn(), None, BlackPawn(), None, BlackPawn()],
+            [None, None,        None, None,        None, None,        None,        None],
+            [None, None,        None, None,        None, None,        None,        None],
+            [WhitePawn(), None, WhitePawn(), None, WhitePawn(), None, WhitePawn(), None],
+            [None, WhitePawn(), None, WhitePawn(), None, WhitePawn(), None, WhitePawn()],
+            [WhitePawn(), None, WhitePawn(), None, WhitePawn(), None, WhitePawn(), None]
+        ]
+    gameboard = Board(board)
+    assert gameboard.get_board_for_ascii() == [
+            [None, 'bp', None, 'bp', None, 'bp', None, 'bp'],
+            ['bp', None, 'bp', None, 'bp', None, 'bp', None],
+            [None, 'bp', None, 'bp', None, 'bp', None, 'bp'],
+            [None, None, None, None, None, None, None, None],
+            [None, None, None, None, None, None, None, None],
+            ['wp', None, 'wp', None, 'wp', None, 'wp', None],
+            [None, 'wp', None, 'wp', None, 'wp', None, 'wp'],
+            ['wp', None, 'wp', None, 'wp', None, 'wp', None]
+    ]
+    bk = BlackPawn()
+    bk.make_king()
+    wk = WhitePawn()
+    wk.make_king()
+
+    board = [
+        [None, bk, None, BlackPawn(), None, BlackPawn(), None, BlackPawn()],
+        [WhitePawn(), None, wk, None, WhitePawn(), None, WhitePawn(), None]
+    ]
+    gameboard = Board(board)
+    assert gameboard.get_board_for_ascii() == [
+        [None, 'bk', None, 'bp', None, 'bp', None, 'bp'],
+        ['wp', None, 'wk', None, 'wp', None, 'wp', None]
+    ]
