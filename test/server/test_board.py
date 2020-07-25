@@ -53,6 +53,27 @@ def test_initial_board_generation():
     for f in [1, 3, 5, 7]:
         assert isinstance(board[6][f], WhitePawn)
 
+def test_is_back_square():
+    board = Board()
+    for f in ['A7', 'A5', 'A3', 'A1',
+              'C7', 'C5', 'C3', 'C1',
+              'E7', 'E5', 'E3', 'E1',
+              'G7', 'G5', 'G3', 'G1',
+              'B8', 'B6', 'B4', 'B2',
+              'D8', 'D6', 'D4', 'D2',
+              'F8', 'F6', 'F4', 'F2',
+              'H8', 'H6', 'H4', 'H2']:
+              assert board.is_black_square(f) is True
+    for f in ['A8', 'A6', 'A4', 'A2',
+            'C8', 'C6', 'C4', 'C2',
+            'E8', 'E6', 'E4', 'E2',
+            'G8', 'G6', 'G4', 'G2',
+            'B7', 'B5', 'B3', 'B1',
+            'D7', 'D5', 'D3', 'D1',
+            'F7', 'F5', 'F3', 'F1',
+            'H7', 'H5', 'H3', 'H1']:
+            assert board.is_black_square(f) is False
+
 def test_do_not_move_to_white_square():
     """It actually tests is_black_square()"""
     black_pawn = BlackPawn()
