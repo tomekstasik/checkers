@@ -20,7 +20,7 @@ class Board(object):
         pass
 
     def is_legal_move(self, move):
-        """Checks if current move is leagal"""
+        """Checks if current move is legal"""
         pass
 
     def is_move_within_board(self, move):
@@ -32,9 +32,9 @@ class Board(object):
         pass
 
     def get_board(self):
-        """Return current boart state"""
+        """Return current board state"""
         pass
 
     def get_board_for_ascii(self):
-        """Returns bord representation for client to build it in ASCII art"""
+        """Returns board representation for client to build it in ASCII art"""
         pass

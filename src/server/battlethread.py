@@ -20,7 +20,7 @@ class BattleThread(threading.Thread):
         pass
 
     def get_opponent(self, player):
-        """Return current player opponent - usefull to assign next turn"""
+        """Return current player opponent - useful to assign next turn"""
         pass
 
     def get_players_nicknames(self):

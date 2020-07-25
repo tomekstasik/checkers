@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class PawnColors(object):
-    """Possible pawn colors"""
+class PawnColours(object):
+    """Possible pawn colours"""
     WHITE = 'w'
     BLACK = 'b'

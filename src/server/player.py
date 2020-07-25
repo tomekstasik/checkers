@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pawncolors import PawnColors
+from pawncolors import PawnColours
 
 class Player(object):
     def __init__(self, socket=None, nickname=None):
@@ -15,12 +15,12 @@ class Player(object):
         """Returns socked used by the player"""
         pass
 
-    def set_color(self, color):
-        """Sets player pawns color"""
+    def set_colour(self, colour):
+        """Sets player pawns colour"""
         pass
 
-    def get_color(self):
-        """Returns player pawns color"""
+    def get_colour(self):
+        """Returns player pawns colour"""
         pass
 
     def set_nickname(self):

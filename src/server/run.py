@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from src.server import Server
+from server import Server
 
 if __name__ == '__main__':
     HOST = '0.0.0.0'

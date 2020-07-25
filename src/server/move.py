@@ -3,7 +3,7 @@
 class Move(object):
 
     def __init__(self, str_from=None, str_to=None):
-        """Initilize move items - translate to xy"""
+        """Initialize move items - translate to xy"""
         pass
 
     def translate_to_xy(self, str_coord):
@@ -35,7 +35,7 @@ class Move(object):
         pass
 
     def get_from_str(self):
-        """Returns string like 'from' coordinates, eg. A1, B4, etc."""
+        """Returns string like 'from' coordinates, e.g. A1, B4, etc."""
         pass
 
     def get_to_xy(self):
@@ -43,5 +43,5 @@ class Move(object):
         pass
 
     def get_to_str(self):
-        """Returns string like 'to' coordinates, eg. A1, B4, etc."""
+        """Returns string like 'to' coordinates, e.g. A1, B4, etc."""
         pass

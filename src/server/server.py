@@ -2,7 +2,7 @@
 
 from battlethread import BattleThread
 from player import Player
-from pawncolors import PawnColors
+from pawncolors import PawnColours
 
 class Server(object):
     """This is server class responsible for waiting for incoming connections."""
