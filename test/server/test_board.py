@@ -118,8 +118,14 @@ def test_do_not_move_black_pawn_up_back():
 def test_move_white_pawn_up():
     white_pawn = WhitePawn()
     board = [ # let assume left bottom corner of board
-        [None,       None],
-        [white_pawn, None],
+        [None,       None], #8
+        [None,       None], #7
+        [None,       None], #6
+        [None,       None], #5
+        [None,       None], #4
+        [None,       None], #3
+        [None,       None], #2
+        [white_pawn, None], #1
     ]
     gameboard = Board(board)
     move = Move('A1', 'B2')
@@ -129,15 +135,28 @@ def test_move_white_pawn_up():
     result = gameboard.make_move(move)
     assert result is True
     assert gameboard.get_board() == [
-        [None, white_pawn],
-        [None,       None],
+        [None,       None], #8
+        [None,       None], #7
+        [None,       None], #6
+        [None,       None], #5
+        [None,       None], #4
+        [None,       None], #3
+        [None, white_pawn], #2
+        [None,       None], #1
     ]
 
 def test_do_not_move_white_pawn_down_back():
     white_pawn = WhitePawn()
     board = [ # let assume left bottom corner of board
-        [None, white_pawn],
-        [None,       None],
+        # A           B
+        [None,       None], #8
+        [None,       None], #7
+        [None,       None], #6
+        [None,       None], #5
+        [None,       None], #4
+        [None,       None], #3
+        [None, white_pawn], #2
+        [None,       None], #1
     ]
     gameboard = Board(board)
     move = Move('B2', 'A1')
@@ -212,10 +231,14 @@ def test_white_captures_black():
     white_pawn = WhitePawn()
     black_pawn = BlackPawn()
     board = [
+        [None,       None, None, None], # 8
+        [None,       None, None, None], # 7
+        [None,       None, None, None], # 6
+        [None,       None, None, None], # 5
         [None,       None, None, None], # 4
         [None,       None, None, None], # 3
         [None, black_pawn, None, None], # 2
-        [white_pawn, None, None, None] # 1
+        [white_pawn, None, None, None]  # 1
         # A           B     C     D
     ]
     gameboard = Board(board)
@@ -223,6 +246,10 @@ def test_white_captures_black():
     result = gameboard.make_move(move)
     assert result is True
     assert gameboard.get_board() ==  [
+        [None, None, None, None], # 8
+        [None, None, None, None], # 7
+        [None, None, None, None], # 6
+        [None, None, None, None], # 5
         [None, None, None, None], # 4
         [None, None, white_pawn, None], # 3
         [None, None, None, None], # 2
@@ -233,9 +260,15 @@ def test_white_captures_black():
 def test_black_pawn_becomes_king():
     black_pawn = BlackPawn()
     board = [
+        [None,       None], # 8
+        [None,       None], # 7
+        [None,       None], # 6
+        [None,       None], # 5
+        [None,       None], # 4
+        [None,       None], # 3
         [None, black_pawn], # 2
-        [None, None],       # 1
-        # A     B
+        [None,       None], # 1
+        # A           B
     ]
     gameboard = Board(board)
     move = Move('B2', 'A1')
@@ -243,9 +276,15 @@ def test_black_pawn_becomes_king():
     assert result is True
     assert black_pawn.is_king() is True
     assert gameboard.get_board() == [
-        [None, None], # 2
+        [None,       None], # 8
+        [None,       None], # 7
+        [None,       None], # 6
+        [None,       None], # 5
+        [None,       None], # 4
+        [None,       None], # 3
+        [None,       None], # 2
         [black_pawn, None], # 1
-        # A     B
+        # A           B
     ]
 
 def test_white_pawn_becomes_king():
