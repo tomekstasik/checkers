@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 class Move(object):
-    def __init__(self, _from, to):
+
+    def __init__(self, str_from=None, str_to=None):
         """Initilize move items - translate to xy"""
         pass
 
-    def translate_to_xy(self, _from, to):
+    def translate_to_xy(self, str_coord):
         """Translates client move representation to board coordinates:
           A B C D E F G H
         8[               ]8
@@ -18,15 +19,29 @@ class Move(object):
         1[               ]1
           A B C D E F G H
               row, col
-        A8 -> (0,   0), A7 -> (1, 0),... A1 -> (7, 0)
-        B8 -> (0, 1),...etc.
+        A1  =  (7, 0)
+        A2  =  (6, 0)
+        A3  =  (5, 0)
+        A4  =  (4, 0)
+        A5  =  (3, 0)
+        A6  =  (2, 0)
+        A7  =  (1, 0)
+        A8  =  (0, 0), etc.
         """
         pass
 
-    def get_from(self):
+    def get_from_xy(self):
         """Returns 'from' coordinates"""
         pass
 
-    def get_to(self):
+    def get_from_str(self):
+        """Returns string like 'from' coordinates, eg. A1, B4, etc."""
+        pass
+
+    def get_to_xy(self):
         """Returns 'to' coordinates"""
+        pass
+
+    def get_to_str(self):
+        """Returns string like 'to' coordinates, eg. A1, B4, etc."""
         pass
