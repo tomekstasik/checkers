@@ -5,6 +5,7 @@ Both players make diagonal moves of uniform game pieces and mandatory captured b
 
 ## Development
 ```sh
+$ git clone https://github.com/tomekstasik/checkers
 $ cd checkers
 $ virtualenv venv
 $ venv\Scripts\activate
