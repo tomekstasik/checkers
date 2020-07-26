@@ -29,7 +29,7 @@ def test_initial_board_generation():
         # Check black fields
         for f in [1, 3, 5, 7]:
             assert isinstance(board[row_num][f], BlackPawn)
-    ### Second row with balck pawns
+    ### Second row with black pawns
     # Check white fields
     for f in [1, 3, 5, 7]:
         assert board[1][f] is None
