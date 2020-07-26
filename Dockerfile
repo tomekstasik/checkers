@@ -1,8 +1,6 @@
 FROM python:2.7
 
 # Copy and install requirements for container
-COPY requirements.txt /
-RUN pip install -r requirements.txt
 COPY README.md /
 COPY src/server /
 COPY src/server/run.py /

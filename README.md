@@ -9,7 +9,6 @@ $ git clone https://github.com/tomekstasik/checkers
 $ cd checkers
 $ virtualenv venv
 $ venv\Scripts\activate
-$ pip install -r requirements.txt
 $ python setup.py develop
 ```
 
