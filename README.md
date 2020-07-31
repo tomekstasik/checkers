@@ -8,7 +8,7 @@ Both players make diagonal moves of uniform game pieces and mandatory captured b
 $ git clone https://github.com/tomekstasik/checkers
 $ cd checkers
 $ virtualenv venv
-$ venv\Scripts\activate
+$ venv/Scripts/activate
 $ python setup.py develop
 ```
 
